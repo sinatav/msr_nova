@@ -1,8 +1,8 @@
-import json
+import csv
 import requests
+
 from pandas.io.json import json_normalize
 import pandas as pd
-
 
 github_api = "https://api.github.com"
 
@@ -30,8 +30,8 @@ while is_next:
     page += 1
 
 commits_df = json_normalize(commits)
-commits_df['date'] =  pd.to_datetime(commits_df['commit.committer.date'])
-commits_df['date'] =  pd.to_datetime(commits_df['date'], utc=True)
+commits_df['date'] = pd.to_datetime(commits_df['commit.committer.date'])
+commits_df['date'] = pd.to_datetime(commits_df['date'], utc=True)
 commits_df['commit_date'] = commits_df['date'].dt.date
 commits_df['commit_year'] = commits_df['date'].dt.year
 commits_df['commit_month'] = commits_df['date'].dt.month
@@ -74,5 +74,10 @@ for i in churn_top_12:
 for i in num_commits_top_12:
     print(i)
 
+with open('ind1.csv', 'w') as f:
+    for key in num_commits_top_12.keys():
+        f.write("%s,%s\n" % (key, num_commits_top_12[key]))
 
-
+with open('ind2.csv', 'w') as f:
+    for key in churn_top_12.keys():
+        f.write("%s,%s\n" % (key, churn_top_12[key]))
