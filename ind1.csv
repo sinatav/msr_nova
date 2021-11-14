@@ -1,0 +1,12 @@
+nova/tests/unit/virt/libvirt/test_driver.py,46
+nova/virt/libvirt/driver.py,45
+nova/network/neutron.py,41
+nova/tests/unit/network/test_neutron.py,39
+nova/tests/unit/compute/test_compute.py,37
+nova/tests/functional/test_servers_resource_request.py,35
+nova/compute/manager.py,33
+nova/tests/unit/compute/test_compute_mgr.py,31
+nova/compute/api.py,31
+nova/tests/unit/compute/test_api.py,31
+nova/tests/fixtures/nova.py,30
+nova/tests/unit/api/openstack/compute/test_servers.py,27

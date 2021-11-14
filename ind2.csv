@@ -1,0 +1,12 @@
+nova/tests/functional/test_servers_resource_request.py,8302
+nova/tests/functional/test_servers.py,6200
+nova/db/sqlalchemy/migrate_repo/versions/402_train.py,4713
+nova/tests/fixtures/nova.py,4068
+nova/db/api.py,3678
+nova/tests/unit/network/test_neutron.py,3397
+nova/db/main/migrations/versions/8f2f1571d55b_initial_version.py,3358
+nova/tests/unit/scheduler/test_driver.py,2588
+nova/tests/fixtures/neutron.py,2454
+nova/tests/unit/scheduler/test_manager.py,2382
+nova/tests/unit/api/openstack/compute/test_servers.py,2381
+nova/db/sqlalchemy/models.py,2372
